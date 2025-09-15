@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gordon and Betty Moore Foundation - Inspiring Change Through Creative Vision</title>
+    <meta name="description" content="Experience the artistic vision of the Gordon and Betty Moore Foundation - where creativity meets philanthropy to inspire transformative change.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Creative Reset and Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-tertiary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-nature: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --gradient-science: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            --artistic-dark: #1a1a2e;
+            --artistic-purple: #16213e;
+            --artistic-gold: #ffd700;
+            --artistic-coral: #ff6b6b;
+            --artistic-mint: #4ecdc4;
+            --text-light: rgba(255, 255, 255, 0.9);
+            --text-medium: rgba(255, 255, 255, 0.7);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background: var(--artistic-dark);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Artistic Background Animation */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .shape:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            animation-delay: -2s;
+        }
+
+        .shape:nth-child(2) {
+            top: 60%;
+            right: 20%;
+            width: 150px;
+            height: 80px;
+            background: var(--gradient-secondary);
+            border-radius: 40px;
+            animation-delay: -5s;
+        }
+
+        .shape:nth-child(3) {
+            bottom: 30%;
+            left: 30%;
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-nature);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            animation-delay: -8s;
+        }
+
+        .shape:nth-child(4) {
+            top: 40%;
+            right: 40%;
+            width: 120px;
+            height: 120px;
+            background: var(--gradient-tertiary);
+            border-radius: 20px;
+            transform: rotate(45deg);
+            animation-delay: -12s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(120deg); }
+            66% { transform: translateY(20px) rotate(240deg); }
+        }
+
+        /* Artistic Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background: rgba(26, 26, 46, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover::after {
+            transform: scaleX(1);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--gradient-secondary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--artistic-coral);
+            transform: translateY(-2px);
+        }
+
+        .nav-link:hover::before {
+            width: 100%;
+        }
+
+        .artistic-donate-btn {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .artistic-donate-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .artistic-donate-btn:hover::before {
+            left: 100%;
+        }
+
+        .artistic-donate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(245, 87, 108, 0.3);
+        }
+
+        /* Artistic Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: var(--gradient-primary);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.03)"/><circle cx="20" cy="20" r="0.5" fill="rgba(255,255,255,0.02)"/><circle cx="80" cy="80" r="0.8" fill="rgba(255,255,255,0.025)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 50%, #ffffff 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(255,255,255,0.5);
+            animation: textGlow 3s ease-in-out infinite alternate;
+            line-height: 1.2;
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 30px rgba(255,255,255,0.5); }
+            100% { text-shadow: 0 0 50px rgba(255,255,255,0.8), 0 0 70px rgba(102, 126, 234, 0.3); }
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-medium);
+            font-style: italic;
+            animation: slideInFade 1s ease-out 0.5s both;
+        }
+
+        .artistic-cta-container {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideInFade 1s ease-out 1s both;
+        }
+
+        .artistic-btn {
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary-artistic {
+            background: var(--gradient-nature);
+            color: white;
+        }
+
+        .btn-secondary-artistic {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .artistic-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transition: all 0.6s ease;
+            transform: translate(-50%, -50%);
+        }
+
+        .artistic-btn:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .artistic-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes slideInFade {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Artistic Mission Section */
+        .mission-artistic {
+            padding: 150px 2rem;
+            background: var(--artistic-dark);
+            position: relative;
+        }
+
+        .mission-artistic::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--gradient-primary), var(--artistic-dark));
+        }
+
+        .artistic-section-title {
+            text-align: center;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 4rem;
+            background: var(--gradient-secondary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+
+        .artistic-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 4px;
+            background: var(--gradient-secondary);
+            border-radius: 2px;
+        }
+
+        .mission-grid-artistic {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .mission-card-artistic {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+
+        .mission-card-artistic::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .mission-card-artistic:hover::before {
+            left: 100%;
+        }
+
+        .mission-card-artistic:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .mission-card-artistic:nth-child(1) { border-top: 3px solid #667eea; }
+        .mission-card-artistic:nth-child(2) { border-top: 3px solid #43e97b; }
+        .mission-card-artistic:nth-child(3) { border-top: 3px solid #fa709a; }
+        .mission-card-artistic:nth-child(4) { border-top: 3px solid #4facfe; }
+
+        .mission-icon-artistic {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+            position: relative;
+        }
+
+        .mission-card-artistic:nth-child(1) .mission-icon-artistic { color: #667eea; }
+        .mission-card-artistic:nth-child(2) .mission-icon-artistic { color: #43e97b; }
+        .mission-card-artistic:nth-child(3) .mission-icon-artistic { color: #fa709a; }
+        .mission-card-artistic:nth-child(4) .mission-icon-artistic { color: #4facfe; }
+
+        .mission-icon-artistic::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: currentColor;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.2;
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+
+        .mission-card-artistic:hover .mission-icon-artistic::after {
+            width: 100px;
+            height: 100px;
+        }
+
+        .mission-card-artistic h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .mission-card-artistic p {
+            color: var(--text-medium);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* Artistic Data Visualization Section */
+        .data-viz-section {
+            padding: 150px 2rem;
+            background: var(--artistic-purple);
+            position: relative;
+        }
+
+        .viz-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .artistic-chart {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 30px;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
+        }
+
+        .impact-circles {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .impact-circle {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        .impact-circle:nth-child(1) { background: var(--gradient-primary); }
+        .impact-circle:nth-child(2) { background: var(--gradient-nature); }
+        .impact-circle:nth-child(3) { background: var(--gradient-secondary); }
+        .impact-circle:nth-child(4) { background: var(--gradient-tertiary); }
+
+        .impact-circle:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .impact-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .impact-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* Creative Video Section */
+        .video-section-artistic {
+            padding: 150px 2rem;
+            background: var(--artistic-dark);
+            position: relative;
+            text-align: center;
+        }
+
+        .video-artistic-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .video-frame-artistic {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            border-radius: 30px;
+            overflow: hidden;
+            margin-top: 3rem;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            transition: all 0.5s ease;
+        }
+
+        .video-frame-artistic:hover {
+            transform: scale(1.02);
+            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.4);
+        }
+
+        .video-placeholder {
+            text-align: center;
+            color: white;
+        }
+
+        .video-placeholder i {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        /* Artistic Donation Section */
+        .donation-artistic {
+            padding: 150px 2rem;
+            background: var(--gradient-science);
+            position: relative;
+        }
+
+        .donation-form-artistic {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 4rem;
+            border-radius: 40px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+            color: var(--artistic-dark);
+        }
+
+        .donation-form-artistic h3 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .amount-grid-artistic {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .amount-btn-artistic {
+            padding: 1.5rem;
+            border: 2px solid transparent;
+            background: var(--gradient-tertiary);
+            color: white;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .amount-btn-artistic::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .amount-btn-artistic:hover::before {
+            left: 100%;
+        }
+
+        .amount-btn-artistic:hover,
+        .amount-btn-artistic.active {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .custom-input-artistic {
+            width: 100%;
+            padding: 1.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .custom-input-artistic:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
+        }
+
+        /* Funding Request Artistic */
+        .funding-artistic {
+            padding: 150px 2rem;
+            background: var(--artistic-dark);
+            position: relative;
+        }
+
+        .request-form-artistic {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 4rem;
+            border-radius: 40px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group-artistic {
+            margin-bottom: 2rem;
+        }
+
+        .form-group-artistic label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--artistic-coral);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .form-group-artistic input,
+        .form-group-artistic textarea,
+        .form-group-artistic select {
+            width: 100%;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group-artistic input:focus,
+        .form-group-artistic textarea:focus,
+        .form-group-artistic select:focus {
+            outline: none;
+            border-color: var(--artistic-coral);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 20px rgba(255, 107, 107, 0.2);
+        }
+
+        .form-group-artistic textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Artistic Chatbot */
+        .chatbot-artistic {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1001;
+        }
+
+        .chatbot-toggle-artistic {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--gradient-secondary);
+            color: white;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chatbot-toggle-artistic::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .chatbot-toggle-artistic:hover::before {
+            left: 100%;
+        }
+
+        .chatbot-toggle-artistic:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 15px 40px rgba(245, 87, 108, 0.6);
+        }
+
+        .chatbot-window-artistic {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 450px;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .chatbot-window-artistic.active {
+            display: flex;
+            animation: slideInUp 0.3s ease-out;
+        }
+
+        .chat-header-artistic {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+        }
+
+        .chat-header-artistic::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        }
+
+        .chat-messages-artistic {
+            flex: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+        }
+
+        .chat-input-artistic {
+            padding: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            gap: 1rem;
+        }
+
+        .chat-input-artistic input {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            color: white;
+            outline: none;
+        }
+
+        .chat-send-artistic {
+            background: var(--gradient-secondary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chat-send-artistic:hover {
+            transform: scale(1.1);
+        }
+
+        /* Artistic Footer */
+        .footer-artistic {
+            background: var(--artistic-dark);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 80px 2rem 30px;
+            position: relative;
+        }
+
+        .footer-artistic::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--gradient-primary);
+        }
+
+        .footer-content-artistic {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section-artistic h3 {
+            color: var(--artistic-coral);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .footer-section-artistic ul {
+            list-style: none;
+        }
+
+        .footer-section-artistic ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section-artistic ul li a {
+            color: var(--text-medium);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .footer-section-artistic ul li a:hover {
+            color: var(--artistic-mint);
+            padding-left: 10px;
+        }
+
+        .social-links-artistic {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links-artistic a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-links-artistic a:nth-child(1) { background: var(--gradient-primary); }
+        .social-links-artistic a:nth-child(2) { background: var(--gradient-secondary); }
+        .social-links-artistic a:nth-child(3) { background: var(--gradient-tertiary); }
+        .social-links-artistic a:nth-child(4) { background: var(--gradient-nature); }
+        .social-links-artistic a:nth-child(5) { background: var(--gradient-science); }
+
+        .social-links-artistic a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .social-links-artistic a:hover::before {
+            left: 100%;
+        }
+
+        .social-links-artistic a:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        .footer-bottom-artistic {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-medium);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .artistic-section-title {
+                font-size: 2.5rem;
+            }
+
+            .mission-grid-artistic {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-circles {
+                flex-direction: column;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .amount-grid-artistic {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .chatbot-window-artistic {
+                width: calc(100vw - 20px);
+                right: -140px;
+            }
+
+            .artistic-cta-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .video-frame-artistic {
+                height: 300px;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Artistic Background Animation -->
+    <div class="bg-animation">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    </div>
+
+    <!-- Artistic Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">Moore Foundation</a>
+            <ul class="nav-menu">
+                <li><a href="#mission" class="nav-link">Vision</a></li>
+                <li><a href="#impact" class="nav-link">Impact</a></li>
+                <li><a href="#funding" class="nav-link">Collaborate</a></li>
+                <li><a href="#about" class="nav-link">Story</a></li>
+                <li><a href="#news" class="nav-link">Insights</a></li>
+                <li><a href="#contact" class="nav-link">Connect</a></li>
+            </ul>
+            <a href="#donate" class="artistic-donate-btn">Inspire Change</a>
+        </nav>
+    </header>
+
+    <!-- Artistic Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Painting Tomorrow</h1>
+            <p class="hero-subtitle">"Where art meets science, beauty inspires discovery, and creativity fuels change"</p>
+            <div class="artistic-cta-container">
+                <a href="#mission" class="artistic-btn btn-primary-artistic">
+                    <i class="fas fa-palette"></i>
+                    <span>Explore Our Canvas</span>
+                </a>
+                <a href="#funding" class="artistic-btn btn-secondary-artistic">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Join Our Vision</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artistic Mission Section -->
+    <section id="mission" class="mission-artistic">
+        <div class="container">
+            <h2 class="artistic-section-title">Four Masterpieces</h2>
+            <div class="mission-grid-artistic">
+                <div class="mission-card-artistic">
+                    <div class="mission-icon-artistic">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Scientific Renaissance</h3>
+                    <p>Like master artists discovering new pigments, we support bold researchers who paint breakthrough discoveries on the canvas of human knowledge, creating masterpieces of scientific understanding.</p>
+                </div>
+                <div class="mission-card-artistic">
+                    <div class="mission-icon-artistic">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Nature's Gallery</h3>
+                    <p>Preserving Earth's living artwork through innovative conservation, we protect the planet's natural masterpieces while inspiring sustainable harmony between humanity and nature's creativity.</p>
+                </div>
+                <div class="mission-card-artistic">
+                    <div class="mission-icon-artistic">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Healing Arts</h3>
+                    <p>Transforming patient care into an art form, we support medical innovations that heal not just bodies but spirits, creating beautiful stories of recovery and hope.</p>
+                </div>
+                <div class="mission-card-artistic">
+                    <div class="mission-icon-artistic">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Bay Area Tapestry</h3>
+                    <p>Weaving together the cultural and natural threads of the San Francisco Bay Area, preserving its unique character as a living artwork for future generations to cherish.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artistic Data Visualization -->
+    <section id="impact" class="data-viz-section">
+        <div class="viz-container">
+            <h2 class="artistic-section-title">Our Impact Palette</h2>
+            <div class="artistic-chart">
+                <div class="impact-circles">
+                    <div class="impact-circle">
+                        <span class="impact-number" data-target="8.2">0</span>
+                        <div class="impact-label">Billion in Creative Investment</div>
+                    </div>
+                    <div class="impact-circle">
+                        <span class="impact-number" data-target="1200">0</span>
+                        <div class="impact-label">Innovative Projects</div>
+                    </div>
+                    <div class="impact-circle">
+                        <span class="impact-number" data-target="500">0</span>
+                        <div class="impact-label">Visionary Partners</div>
+                    </div>
+                    <div class="impact-circle">
+                        <span class="impact-number" data-target="25">0</span>
+                        <div class="impact-label">Years of Artistry</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Video Section -->
+    <section class="video-section-artistic">
+        <div class="video-artistic-container">
+            <h2 class="artistic-section-title">The Artists Behind the Vision</h2>
+            <p style="font-size: 1.3rem; color: var(--text-medium); margin-bottom: 2rem; font-style: italic;">
+                "Every great artwork begins with a vision. Discover the passionate creators who dreamed of a better world."
+            </p>
+            <div class="video-frame-artistic">
+    <iframe src="https://drive.google.com/file/d/1_BbEYNXTYIDd1EbzPwzPOYiLNMIdDJCA/preview" 
+            allow="autoplay" 
+            allowfullscreen
+            style="width: 100%; height: 100%; border: none; border-radius: 30px;"
+            title="Gordon & Betty Moore: A Love Story of Giving">
+    </iframe>
+</div>
+        </div>
+    </section>
+
+    <!-- Artistic Donation Section -->
+    <section id="donate" class="donation-artistic">
+        <div class="container">
+            <h2 class="artistic-section-title" style="color: white;">Become a Patron of Change</h2>
+            <div class="donation-form-artistic">
+                <h3>Invest in Tomorrow's Masterpiece</h3>
+                <div class="amount-grid-artistic">
+                    <button class="amount-btn-artistic" data-amount="100">$100</button>
+                    <button class="amount-btn-artistic" data-amount="250">$250</button>
+                    <button class="amount-btn-artistic" data-amount="500">$500</button>
+                    <button class="amount-btn-artistic" data-amount="1000">$1,000</button>
+                    <button class="amount-btn-artistic" data-amount="2500">$2,500</button>
+                    <button class="amount-btn-artistic" data-amount="other">Custom</button>
+                </div>
+                <input type="number" class="custom-input-artistic" placeholder="Enter your inspiration amount" style="display: none;">
+                <div class="form-group-artistic">
+                    <label>Choose Your Canvas:</label>
+                    <select class="custom-input-artistic">
+                        <option value="general">All Four Masterpieces</option>
+                        <option value="science">Scientific Renaissance</option>
+                        <option value="environment">Nature's Gallery</option>
+                        <option value="healthcare">Healing Arts</option>
+                        <option value="bayarea">Bay Area Tapestry</option>
+                    </select>
+                </div>
+                <button class="artistic-btn btn-primary-artistic" style="width: 100%; justify-content: center; padding: 1.5rem;">
+                    <i class="fas fa-heart"></i>
+                    <span>Create Impact</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artistic Funding Request -->
+    <section id="funding" class="funding-artistic">
+        <div class="container">
+            <h2 class="artistic-section-title">Share Your Vision</h2>
+            <div class="request-form-artistic">
+                <h3 style="text-align: center; margin-bottom: 3rem; color: var(--artistic-coral); font-size: 2rem;">
+                    Let's Create Something Beautiful Together
+                </h3>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group-artistic">
+                            <label>Organization Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group-artistic">
+                            <label>Visionary Leader</label>
+                            <input type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group-artistic">
+                            <label>Email Canvas</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group-artistic">
+                            <label>Artistic Medium</label>
+                            <select required>
+                                <option value="">Choose your canvas</option>
+                                <option value="science">Scientific Renaissance</option>
+                                <option value="environment">Nature's Gallery</option>
+                                <option value="healthcare">Healing Arts</option>
+                                <option value="bayarea">Bay Area Tapestry</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group-artistic">
+                            <label>Investment Needed</label>
+                            <input type="text" placeholder="Your vision's value">
+                        </div>
+                        <div class="form-group-artistic">
+                            <label>Masterpiece Title</label>
+                            <input type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-group-artistic">
+                        <label>Paint Your Vision</label>
+                        <textarea placeholder="Describe the masterpiece you want to create, the colors you'll use, and the impact it will have on the world..." required></textarea>
+                    </div>
+                    <button type="submit" class="artistic-btn btn-primary-artistic" style="width: 100%; justify-content: center; padding: 1.5rem;">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Submit Your Masterpiece</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artistic Chatbot -->
+    <div class="chatbot-artistic">
+        <button class="chatbot-toggle-artistic" onclick="toggleArtisticChatbot()">
+            <i class="fas fa-palette"></i>
+        </button>
+        <div class="chatbot-window-artistic" id="artistic-chatbot">
+            <div class="chat-header-artistic">
+                <i class="fas fa-robot"></i> Creative Muse
+            </div>
+            <div class="chat-messages-artistic" id="artistic-chat-messages">
+                <div style="background: rgba(102, 126, 234, 0.2); padding: 1rem; border-radius: 15px; margin-bottom: 1rem;">
+                    Welcome, fellow artist! I'm here to help you discover how the Moore Foundation can turn your vision into reality. What masterpiece shall we create today?
+                </div>
+            </div>
+            <div class="chat-input-artistic">
+                <input type="text" placeholder="Share your creative vision..." id="artistic-chat-input" onkeypress="handleArtisticChatInput(event)">
+                <button class="chat-send-artistic" onclick="sendArtisticMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Artistic Footer -->
+    <footer class="footer-artistic">
+        <div class="footer-content-artistic">
+            <div class="footer-section-artistic">
+                <h3>Our Gallery</h3>
+                <ul>
+                    <li><a href="#vision">Our Vision</a></li>
+                    <li><a href="#history">Origin Story</a></li>
+                    <li><a href="#leadership">Creative Directors</a></li>
+                    <li><a href="#reports">Annual Exhibitions</a></li>
+                    <li><a href="#careers">Join Our Atelier</a></li>
+                </ul>
+            </div>
+            <div class="footer-section-artistic">
+                <h3>Collaboration</h3>
+                <ul>
+                    <li><a href="#apply">Submit Your Art</a></li>
+                    <li><a href="#guidelines">Creative Guidelines</a></li>
+                    <li><a href="#current">Current Exhibitions</a></li>
+                    <li><a href="#impact">Impact Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section-artistic">
+                <h3>Creative Resources</h3>
+                <ul>
+                    <li><a href="#insights">Creative Insights</a></li>
+                    <li><a href="#publications">Art Publications</a></li>
+                    <li><a href="#events">Gallery Openings</a></li>
+                    <li><a href="#media">Media Palette</a></li>
+                    <li><a href="#connect">Creative Connect</a></li>
+                </ul>
+            </div>
+            <div class="footer-section-artistic">
+                <h3>Join Our Movement</h3>
+                <p style="color: var(--text-medium); line-height: 1.7;">Become part of a creative community that's painting a brighter future for humanity.</p>
+                <div class="social-links-artistic">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <input type="email" placeholder="Subscribe to our creative newsletter" style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 15px; color: white; margin-bottom: 1rem;">
+                    <button class="artistic-btn btn-primary-artistic" style="width: 100%; padding: 1rem;">Join the Canvas</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-artistic">
+            <p>&copy; 2024 Gordon and Betty Moore Foundation - Where Vision Becomes Reality | 
+            <a href="#privacy" style="color: var(--artistic-coral);">Privacy Canvas</a> | 
+            <a href="#terms" style="color: var(--artistic-coral);">Creative Terms</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Artistic JavaScript functionality
+        
+        // Mobile menu and smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effects
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
+                header.style.background = 'rgba(26, 26, 46, 0.95)';
+                header.style.backdropFilter = 'blur(30px)';
+                header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
+            } else {
+                header.style.background = 'rgba(26, 26, 46, 0.9)';
+                header.style.backdropFilter = 'blur(20px)';
+                header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+            }
+
+            // Parallax effect for floating shapes
+            const shapes = document.querySelectorAll('.shape');
+            shapes.forEach((shape, index) => {
+                const speed = (index + 1) * 0.5;
+                const yPos = -(scrollTop * speed / 100);
+                shape.style.transform = `translate3d(0, ${yPos}px, 0)`;
+            });
+
+            lastScrollTop = scrollTop;
+        });
+
+        // Animated counters with artistic flair
+        function animateArtisticCounters() {
+            const counters = document.querySelectorAll('.impact-number');
+            counters.forEach(counter => {
+                const target = parseFloat(counter.getAttribute('data-target'));
+                const duration = 3000; // Longer animation for artistic effect
+                const increment = target / (duration / 16);
+                let current = 0;
+
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target % 1 === 0 ? target.toString() : target.toFixed(1);
+                        clearInterval(timer);
+                        // Add sparkle effect when complete
+                        counter.style.textShadow = '0 0 20px currentColor';
+                        setTimeout(() => {
+                            counter.style.textShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
+                        }, 1000);
+                    } else {
+                        counter.textContent = current % 1 === 0 ? Math.floor(current).toString() : current.toFixed(1);
+                    }
+                }, 16);
+            });
+        }
+
+        // Intersection Observer for animations
+        const artisticObserverOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const artisticObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('data-viz-section')) {
+                        animateArtisticCounters();
+                        // Animate impact circles
+                        const circles = entry.target.querySelectorAll('.impact-circle');
+                        circles.forEach((circle, index) => {
+                            setTimeout(() => {
+                                circle.style.transform = 'scale(1.05) rotate(5deg)';
+                                setTimeout(() => {
+                                    circle.style.transform = 'scale(1) rotate(0deg)';
+                                }, 300);
+                            }, index * 200);
+                        });
+                    }
+                    
+                    // Animate mission cards
+                    if (entry.target.classList.contains('mission-artistic')) {
+                        const cards = entry.target.querySelectorAll('.mission-card-artistic');
+                        cards.forEach((card, index) => {
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, index * 150);
+                        });
+                    }
+                    
+                    artisticObserver.unobserve(entry.target);
+                }
+            });
+        }, artisticObserverOptions);
+
+        // Initialize mission cards as hidden
+        document.querySelectorAll('.mission-card-artistic').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        });
+
+        // Observe sections
+        const sections = document.querySelectorAll('.data-viz-section, .mission-artistic');
+        sections.forEach(section => {
+            artisticObserver.observe(section);
+        });
+
+        // Artistic donation functionality
+        document.querySelectorAll('.amount-btn-artistic').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.amount-btn-artistic').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const customAmount = document.querySelector('.custom-input-artistic');
+                if (this.getAttribute('data-amount') === 'other') {
+                    customAmount.style.display = 'block';
+                    customAmount.focus();
+                    // Add glow effect
+                    customAmount.style.boxShadow = '0 0 30px rgba(102, 126, 234, 0.3)';
+                } else {
+                    customAmount.style.display = 'none';
+                    customAmount.value = this.getAttribute('data-amount');
+                }
+            });
+        });
+
+        // Artistic chatbot functionality
+        function toggleArtisticChatbot() {
+            const chatbot = document.getElementById('artistic-chatbot');
+            chatbot.classList.toggle('active');
+            
+            if (chatbot.classList.contains('active')) {
+                document.getElementById('artistic-chat-input').focus();
+                // Add entrance animation
+                chatbot.style.animation = 'slideInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+            }
+        }
+
+        function sendArtisticMessage() {
+            const input = document.getElementById('artistic-chat-input');
+            const message = input.value.trim();
+            
+            if (message) {
+                addArtisticMessage(message, 'user');
+                input.value = '';
+                
+                // Add typing indicator
+                addTypingIndicator();
+                
+                setTimeout(() => {
+                    removeTypingIndicator();
+                    const response = getArtisticBotResponse(message);
+                    addArtisticMessage(response, 'bot');
+                }, 1500);
+            }
+        }
+
+        function handleArtisticChatInput(event) {
+            if (event.key === 'Enter') {
+                sendArtisticMessage();
+            }
+        }
+
+        function addArtisticMessage(message, sender) {
+            const messagesContainer = document.getElementById('artistic-chat-messages');
+            const messageDiv = document.createElement('div');
+            
+            messageDiv.style.marginBottom = '1rem';
+            messageDiv.style.padding = '1rem';
+            messageDiv.style.borderRadius = '20px';
+            messageDiv.style.maxWidth = '80%';
+            messageDiv.style.wordWrap = 'break-word';
+            
+            if (sender === 'user') {
+                messageDiv.style.background = 'var(--gradient-secondary)';
+                messageDiv.style.color = 'white';
+                messageDiv.style.marginLeft = 'auto';
+                messageDiv.style.marginRight = '0';
+                messageDiv.style.textAlign = 'right';
+            } else {
+                messageDiv.style.background = 'rgba(102, 126, 234, 0.2)';
+                messageDiv.style.color = 'var(--text-light)';
+                messageDiv.style.marginLeft = '0';
+                messageDiv.style.marginRight = 'auto';
+            }
+            
+            messageDiv.textContent = message;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            
+            // Add fade-in animation
+            messageDiv.style.opacity = '0';
+            messageDiv.style.transform = 'translateY(10px)';
+            messageDiv.style.transition = 'all 0.3s ease';
+            
+            setTimeout(() => {
+                messageDiv.style.opacity = '1';
+                messageDiv.style.transform = 'translateY(0)';
+            }, 100);
+        }
+
+        function addTypingIndicator() {
+            const messagesContainer = document.getElementById('artistic-chat-messages');
+            const typingDiv = document.createElement('div');
+            typingDiv.id = 'typing-indicator';
+            typingDiv.style.marginBottom = '1rem';
+            typingDiv.style.padding = '1rem';
+            typingDiv.style.borderRadius = '20px';
+            typingDiv.style.background = 'rgba(102, 126, 234, 0.2)';
+            typingDiv.style.color = 'var(--text-light)';
+            typingDiv.style.maxWidth = '80%';
+            typingDiv.innerHTML = '<i class="fas fa-palette fa-spin"></i> Creating a response...';
+            messagesContainer.appendChild(typingDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function removeTypingIndicator() {
+            const typingIndicator = document.getElementById('typing-indicator');
+            if (typingIndicator) {
+                typingIndicator.remove();
+            }
+        }
+
+        function getArtisticBotResponse(message) {
+            const responses = {
+                'funding': 'Ah, a fellow visionary! Let\'s paint your funding request together. Our four canvases await: Scientific Renaissance, Nature\'s Gallery, Healing Arts, and Bay Area Tapestry. Which speaks to your creative soul?',
+                'donate': 'Your generosity is like adding vibrant colors to our palette! Every contribution helps us create masterpieces of positive change. Choose your canvas and let\'s make magic together!',
+                'mission': 'We are artists of change, painting the future with four bold strokes: advancing scientific discovery, preserving nature\'s gallery, healing through art, and celebrating the Bay Area\'s unique tapestry.',
+                'contact': 'Connect with our creative collective! Use our contact canvas or visit our Palo Alto atelier. We\'re always ready to collaborate on your next masterpiece.',
+                'grants': 'Our grants are like art supplies for visionaries! Each focus area has its own creative guidelines. Let me help you find the perfect medium for your artistic vision.',
+                'art': 'Art is the soul of everything we do! We believe that creativity and beauty can solve the world\'s greatest challenges. What artistic vision do you want to bring to life?',
+                'creative': 'Creativity is our superpower! Whether it\'s scientific discovery, environmental conservation, healthcare innovation, or community building - we approach everything with an artist\'s eye.',
+                'vision': 'Gordon and Betty Moore envisioned a foundation that would be like a master artist\'s studio - where bold ideas are nurtured, creativity flourishes, and beautiful solutions emerge to benefit all humanity.'
+            };
+            
+            const lowerMessage = message.toLowerCase();
+            
+            for (const [key, response] of Object.entries(responses)) {
+                if (lowerMessage.includes(key)) {
+                    return response;
+                }
+            }
+            
+            return 'What a fascinating question! As your creative muse, I can help you explore funding opportunities, donation options, our artistic mission, grants, and ways to connect with our community. What masterpiece shall we create together?';
+        }
+
+        // Artistic form submissions
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalContent = submitBtn.innerHTML;
+                
+                // Artistic loading animation
+                submitBtn.innerHTML = '<i class="fas fa-palette fa-spin"></i><span>Creating Magic...</span>';
+                submitBtn.style.background = 'var(--gradient-science)';
+                submitBtn.disabled = true;
+                
+                // Validate required fields with artistic flair
+                const requiredFields = this.querySelectorAll('[required]');
+                let isValid = true;
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.style.borderColor = '#ff6b6b';
+                        field.style.boxShadow = '0 0 20px rgba(255, 107, 107, 0.3)';
+                        isValid = false;
+                    } else {
+                        field.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                        field.style.boxShadow = '0 0 20px rgba(67, 233, 123, 0.2)';
+                    }
+                });
+                
+                setTimeout(() => {
+                    if (isValid) {
+                        // Success animation
+                        submitBtn.innerHTML = '<i class="fas fa-check"></i><span>Masterpiece Created!</span>';
+                        submitBtn.style.background = 'var(--gradient-nature)';
+                        
+                        setTimeout(() => {
+                            alert('🎨 Your creative vision has been received! Our artistic team will review your masterpiece and connect with you within 2-3 days. Let\'s create something beautiful together!');
+                            this.reset();
+                            submitBtn.innerHTML = originalContent;
+                            submitBtn.style.background = '';
+                            submitBtn.disabled = false;
+                        }, 1500);
+                    } else {
+                        submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i><span>Missing Colors</span>';
+                        submitBtn.style.background = '#ff6b6b';
+                        
+                        setTimeout(() => {
+                            submitBtn.innerHTML = originalContent;
+                            submitBtn.style.background = '';
+                            submitBtn.disabled = false;
+                        }, 2000);
+                    }
+                }, 2000);
+            });
+        });
+
+        // Interactive hover effects for mission cards
+        document.querySelectorAll('.mission-card-artistic').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                // Create sparkle effect
+                for (let i = 0; i < 5; i++) {
+                    setTimeout(() => {
+                        createSparkle(this);
+                    }, i * 100);
+                }
+            });
+        });
+
+        function createSparkle(element) {
+            const sparkle = document.createElement('div');
+            sparkle.innerHTML = '✨';
+            sparkle.style.position = 'absolute';
+            sparkle.style.fontSize = '1rem';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.zIndex = '1000';
+            sparkle.style.color = '#ffd700';
+            
+            const rect = element.getBoundingClientRect();
+            sparkle.style.left = (rect.left + Math.random() * rect.width) + 'px';
+            sparkle.style.top = (rect.top + Math.random() * rect.height) + 'px';
+            
+            document.body.appendChild(sparkle);
+            
+            sparkle.animate([
+                { transform: 'translateY(0px) scale(0)', opacity: 1 },
+                { transform: 'translateY(-30px) scale(1)', opacity: 0 }
+            ], {
+                duration: 1000,
+                easing: 'ease-out'
+            }).onfinish = () => {
+                sparkle.remove();
+            };
+        }
+
+        // Accessibility improvements
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const chatbot = document.getElementById('artistic-chatbot');
+                if (chatbot.classList.contains('active')) {
+                    toggleArtisticChatbot();
+                }
+            }
+        });
+
+        // Performance optimization
+        let ticking = false;
+        function updateAnimations() {
+            // Batch DOM updates
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    // Update any continuous animations here
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', updateAnimations);
+
+        // Initialize page
+        window.addEventListener('load', function() {
+            console.log('🎨 Moore Foundation Artistic Website loaded successfully');
+            
+            // Add entrance animation to hero
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.animation = 'slideInFade 1.2s cubic-bezier(0.4, 0, 0.2, 1)';
+            }
+        });
+    </script>
+</body>
+</html>
